@@ -45,4 +45,11 @@ public class DeveloperTest {
         assertTrue(t.getMembers().contains("Vincent"),"Team should contain Vincent");
         assertTrue(t.getMembers().contains("Viraj"),"Team should contain Viraj");
     }
+
+    public void testAddMember() {
+        String name = "Jun";
+        Team t = Developer.getTeam();
+        t.addMember(name);
+        assertTrue(t.getMembers().contains(name), "Team should contain the member that was added");
+    }
 }
